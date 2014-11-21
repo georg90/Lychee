@@ -6,11 +6,11 @@
 # @copyright	2014 by Tobias Reich
 ###
 
-@ini_set('max_execution_time', '200');
-@ini_set('post_max_size', '200M');
-@ini_set('upload_max_size', '200M');
-@ini_set('upload_max_filesize', '20M');
-@ini_set('max_file_uploads', '100');
+#@ini_set('max_execution_time', '200');
+#@ini_set('post_max_size', '200M');
+#@ini_set('upload_max_size', '200M');
+#@ini_set('upload_max_filesize', '20M');
+#@ini_set('max_file_uploads', '100');
 
 if (!empty($_POST['function'])||!empty($_GET['function'])) {
 
