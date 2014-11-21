@@ -5,10 +5,17 @@
 # @author		Tobias Reich
 # @copyright	2014 by Tobias Reich
 ###
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (!defined('LYCHEE')) exit('Error: Direct access is not allowed!');
 if (!defined('LYCHEE_ACCESS_GUEST')) exit('Error: You are not allowed to access this area!');
-
+if(!isset($_SESSION['GUEST_LOGIN'])) 
+{
+	header("Location: https://steffiundgeorg.de");
+	exit('Error: You are not allowed to access this are without password! Please go back');
+}
 class Guest extends Access {
 
 	public function check($fn) {
